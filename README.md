@@ -42,53 +42,7 @@ $ python train.py -net vgg16 -gpu
 sometimes, you might want to use warmup training by set ```-warm``` to 1 or 2, to prevent network
 diverge during early training phase.
 
-The supported net args are:
-```
-squeezenet
-mobilenet
-mobilenetv2
-shufflenet
-shufflenetv2
-vgg11
-vgg13
-vgg16
-vgg19
-densenet121
-densenet161
-densenet201
-googlenet
-inceptionv3
-inceptionv4
-inceptionresnetv2
-xception
-resnet18
-resnet34
-resnet50
-resnet101
-resnet152
-preactresnet18
-preactresnet34
-preactresnet50
-preactresnet101
-preactresnet152
-resnext50
-resnext101
-resnext152
-attention56
-attention92
-seresnet18
-seresnet34
-seresnet50
-seresnet101
-seresnet152
-nasnet
-wideresnet
-stochasticdepth18
-stochasticdepth34
-stochasticdepth50
-stochasticdepth101
-```
-Normally, the weights file with the best accuracy would be written to the disk with name suffix 'best'(default in checkpoint folder).
+ the weights file with the best accuracy would be written to the disk with name suffix 'best'(default in checkpoint folder).
 
 
 ### 5. test the model
