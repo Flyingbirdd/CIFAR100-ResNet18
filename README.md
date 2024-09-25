@@ -1,8 +1,8 @@
-# Pytorch-cifar100
+# Resnet18-cifar100
 
-practice on cifar100 using pytorch
+practice on cifar100 using resnet18
 项目简介
-论文<Escaping Saddle Points for Effective Generalizationon Class-Imbalanced Data >发现，锐度感知最小化Sharpness-Aware Minimization (SAM) 通过重新加权可以有效地增强沿负曲率的梯度分量，从而有效地摆脱鞍点，从而提高泛化性能。在针对长尾学习和类不平衡学习设计的各种重加权和裕度增强方法中，SAM可以显著提高性能。
+论文Escaping Saddle Points for Effective Generalizationon Class-Imbalanced Data 发现，锐度感知最小化Sharpness-Aware Minimization (SAM) 通过重新加权可以有效地增强沿负曲率的梯度分量，从而有效地摆脱鞍点，从而提高泛化性能。在针对长尾学习和类不平衡学习设计的各种重加权和裕度增强方法中，SAM可以显著提高性能。
 该项目基于深度学习训练神经网络，使用 CIFAR-100 数据集进行图像分类任务，并通过使用SAM优化器提升模型的泛化能力。项目使用了 PyTorch 框架进行模型构建和训练，包含了数据预处理、模型训练、评估以及模型保存的完整流程。
 1. 数据集与数据加载
 项目使用 CIFAR-100 数据集，包含100类彩色图像。项目通过 torchvision.transforms 对图像进行标准化处理，并将训练集与测试集分别加载到 DataLoader 中，便于批量处理。
@@ -21,10 +21,11 @@ practice on cifar100 using pytorch
 7. 项目效果
 项目核心优化器 SAM 的工作原理是通过双步优化来寻找损失平滑的方向，从而提高泛化能力。通过使用 SAM 优化器，该项目旨在提升模型在 CIFAR-100 数据集上的准确率，特别是在数据分布变化或未知噪声干扰下的泛化性能。项目还提供了训练与评估的可视化工具，便于监控训练过程中的重要指标（如梯度、损失、准确率等）。
 8. 训练结果：
-   ![6c29126cf5d9f13f6f2c50eac3bff75](https://github.com/user-attachments/assets/eb8cb501-ab25-4b53-92bb-ab1200881ade)
-   ![2fe7fb74eac0972f62e0b850dfe8238](https://github.com/user-attachments/assets/67c051d9-19cb-474d-8652-a73b8cff9977)
-| Step | Value  |
-|------|--------|
+   ![image](https://github.com/user-attachments/assets/555352cb-a7b2-4439-8209-7a59ab875df3)
+
+   
+|dataset|network|
+|:-----:|:-----:|
 | 1    | 0.1301 |
 | 11   | 0.5124 |
 | 21   | 0.5623 |
