@@ -55,7 +55,7 @@ practice on cifar100 using pytorch
 训练过程中模型不断优化，最终表现稳定且达到较高水平。
 
 
-## Requirements
+## Requirement
  experiment eviroument：
 - python3.6
 - pytorch1.6.0+cu101
